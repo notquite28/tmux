@@ -37,7 +37,8 @@ tmux kill-session -t <name>     # Kill specific session
 | `prefix + \|` | Split vertically (new pane right) |
 | `prefix + -` | Split horizontally (new pane below) |
 | `prefix + h/j/k/l` | Select pane (vim style) |
-| `Alt + h/j/k/l` | Select pane (no prefix - faster!) |
+| `Ctrl + h/j/k/l` | Navigate panes/vim splits (no prefix - vim-tmux-navigator) |
+| `Ctrl + \` | Go to previous pane/split |
 | `prefix + z` | Zoom/unzoom current pane |
 | `prefix + x` | Kill current pane |
 | `prefix + q` | Show pane numbers |
@@ -53,6 +54,7 @@ tmux kill-session -t <name>     # Kill specific session
 | `y` | Copy selection and exit |
 | `q` | Quit copy mode |
 | `h/j/k/l` | Navigate (vim style) |
+| `Ctrl + h/j/k/l` | Switch to other panes |
 | `w/b` | Word forward/backward |
 | `Ctrl-u` | Scroll up half page |
 | `Ctrl-d` | Scroll down half page |
@@ -75,12 +77,13 @@ tmux kill-session -t <name>     # Kill specific session
 - **Renumber**: Windows automatically renumber when closed
 - **Mouse**: Enabled for clicking, selecting, and resizing
 - **Theme**: Catppuccin Mocha (custom)
-- **Fast navigation**: Alt+hjkl for panes, Alt+1-9 for windows (no prefix!)
+- **vim-tmux-navigator**: Seamless `Ctrl+hjkl` navigation between tmux panes and vim splits
+- **Fast navigation**: `Ctrl+hjkl` for panes, `Alt+1-9` for windows (no prefix!)
 
 ## Tips
 
 1. **Instant window switching**: Use `Alt + 1` through `Alt + 9` to jump to any window instantly!
-2. **Fast pane navigation**: Use `Alt + hjkl` to switch panes without pressing prefix
+2. **Seamless navigation**: Use `Ctrl + hjkl` to navigate between tmux panes AND vim splits
 3. **Mouse support**: Click panes to switch, drag borders to resize
 4. **Copy mode workflow**: `prefix + [` → navigate → `v` → select → `y`
 5. **Intuitive splits**: `|` creates vertical split, `-` creates horizontal split
@@ -91,8 +94,9 @@ tmux kill-session -t <name>     # Kill specific session
 ```
 prefix + |          # Split vertically (new pane right)
 prefix + -          # Split horizontally (new pane below)
-Alt + hjkl          # Navigate between panes (no prefix needed!)
+Ctrl + hjkl         # Navigate between panes/vim splits (no prefix!)
 prefix + hjkl       # Navigate between panes (with prefix)
+Ctrl + \            # Go to previous pane/split
 prefix + z          # Zoom focused pane
 Mouse drag border   # Resize panes
 ```
